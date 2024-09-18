@@ -15,11 +15,11 @@
         <div class="main-nav">
             <img src="images/sunimage.png" class="logo">
             <ul class="navbar">
-                <li class="menu-item"><a class="grow menu-link" href="#">Home</a></li>
-                <li class="menu-item"><a class="grow menu-link" href="#">About</a></li>
-                <li class="menu-item"><a class="grow menu-link" href="#">Services</a></li>
-                <li class="menu-item"><a class="grow menu-link" href="#">Projects</a></li>
-                <li class="menu-item"><a class="grow menu-link" href="#">Contact</a></li>
+                <li class="menu-item"><a class="grow menu-link" href="#header">Home</a></li>
+                <li class="menu-item"><a class="grow menu-link" href="#about">About</a></li>
+                <li class="menu-item"><a class="grow menu-link" href="#services">Services</a></li>
+                <li class="menu-item"><a class="grow menu-link" href="#projects">Projects</a></li>
+                <li class="menu-item"><a class="grow menu-link" href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -35,8 +35,10 @@
         </div>
     </div>
 
+
     <div id="about">
         <div class="container">
+                            <div class="blockage"></div>
             <div class="row2">
                 <div class="about-col-1"><img src="images/sunflower.jpg"></div>
                 <div class="about-col-2">
@@ -91,6 +93,7 @@
     <!-- services stuff-->
     <div id="services">
         <div class="container">
+            <div class="blockage"></div>
             <div class="subtitle">My Services</div>
             <div class="services-list">
                 <div>
@@ -139,6 +142,7 @@
     <!-- projects stuff -->
     <div id="projects">
         <div class="container">
+            <div class="blockage"></div>
             <h1 class="subtitle">Projects</h1>
             <div class="projects-list">
                 <div class="projects">
@@ -176,13 +180,13 @@
             <h1 class="subtitle2">Contact Me!</h1>
             <div class="contact-row">
                 <div class="socials">
-                    <p><a href="#"><i class="svg-inline--fa fa-solid fa-envelope"></i> patrickxc.zhou@gmail.com </a></p>
-                    <p><a href="#"><i class="fa-solid fa-mobile"></i> (510)822-2230</a></p>
+                    <p><a href="#" class="contact-info"><i class="fa-solid fa-envelope change-color"></i> patrickxc.zhou@gmail.com </a></p>
+                    <p><a href="#" class="contact-info"><i class="fa-solid fa-mobile change-color"></i> (510)822-2230</a></p>
                     <div class="icons">
-                        <a href="#"><i class="fa-brands fa-linkedin fa-3x"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram fa-3x"></i></a>
-                        <a href="#"><i class="fa-brands fa-github fa-3x"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-3x change-color"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-3x change-color"></i></a>
+                        <a href="#"><i class="fa-brands fa-github fa-3x change-color"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-3x change-color"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -190,7 +194,7 @@
                         <input type="text" name="Name" placeholder="Name" required>
                         <input type="email" name="email" placeholder="Email" required>
                         <textarea name="Message" rows="6" placeholder="Message"></textarea>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="submitButton">Submit</button>
                     </form>
                 </div>
             </div>
@@ -222,7 +226,12 @@
             if (scrollValue > headerheight) {
                 navbar.classList.add("header-sticky");
             } else {
-                navbar.classList.remove("header-sticky");
+                navbar.classList.remove('header-sticky');
+                if (navbar.classList.contains("header-sticky")) {
+                    navbar.classList.add("fadeout");
+                    setTimeout(()=> {navbar.classList.remove('header-sticky', 'fadeout');}, 250);
+                }
+                
             }
         }
 
