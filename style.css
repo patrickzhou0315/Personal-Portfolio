@@ -446,3 +446,129 @@ form input, form textarea{
     margin-top: 10%;
     visibility: hidden;
 }
+
+/* css for small screen */
+@media only screen and (max-width: 600px){
+    .header-text{
+        text-align: center;
+        margin-top: 50%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .pfp{
+        margin-top: 50%;
+    }
+
+    .container {
+        padding-top: 50%;
+    }
+
+    .menu-link{
+        padding: 0 0;
+    }
+
+    nav{
+        justify-content: center
+    }
+
+    .navbar{
+        display: flex;
+        margin: auto;
+    }
+
+    .menu-item{
+        padding: 0 0;
+    }
+
+    .main-nav ul li a{
+        font-size: 13px;
+    }
+
+    .main-nav ul li {
+        margin: 5px;
+    }
+
+    .main-nav{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .row1{
+        margin-top: 0;
+    }
+
+    .pfp{
+        object-fit: contain;
+        width: 10%;
+        flex-basis: 30%;
+    }
+
+    .subtitle{
+        font-size: 30px;
+    }
+
+    /* fix for About Me */
+    .about-col-2 p {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .about-col-2 {
+        display: block;
+        margin: auto;
+    }
+
+    .about-col-1{
+        display: block;
+        margin: auto;
+    }
+
+    .tab-links {
+        margin: 12px;
+    }
+
+    .tab-contents ul li span{
+        font-size: 12px;
+    }
+
+    .tab-contents ul li {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .tab-titles {
+        margin: 20px 0 10px;
+    }
+
+    /* fixing services */
+    .services-list div h2{
+        font-size: 12px;
+    }
+
+    .services-list div p{
+        font-size: 10px;
+    }
+
+    .services-list div a{
+        font-size: 8px;
+    }
+
+    /* fixing Contact */
+    .subtitle2 {
+        font-size: 30px;
+    }
+
+    .contact-row{
+        display: block;
+    }
+    .socials {
+        transform: scale(0.65);
+    }
+
+    .contact-form{
+        transform: scale(0.65);
+    }
+
+}
