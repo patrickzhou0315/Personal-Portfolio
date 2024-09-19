@@ -192,9 +192,9 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="email" name="Email" placeholder="Email" required>
                         <textarea name="Message" rows="6" placeholder="Message"></textarea>
                         <button type="submit" class="submitButton">Submit</button>
                     </form>
@@ -239,6 +239,21 @@
 
         window.addEventListener("scroll", stickyNav);
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx_NPzw_TXPAqzMdwNA-6dw9aqY0QB6KLB14RRh7nfwVUda6uyMeYGbpW1oSkB_A88/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {console.log('Success!', response); 
+                alert("Form Successfully Submitted!");
+            })
+            .catch(error => {console.error('Error!', error.message);
+                alert("Error! Please Try Again!");
+            })
+        })
+      </script>
 
 </body>
 
